@@ -2,11 +2,12 @@ import { useContext } from "react";
 import TvContext from "../context/TvContext";
 
 export default function ShowFilmTv() {
-  const { FilmTv } = useContext(TvContext);
-  console.log(FilmTv);
+  const { Film } = useContext(TvContext);
+  console.log(Film);
   return (
     <div>
-      {FilmTv.map((el) => (
+      <h1>Film:</h1>
+      {Film.map((el) => (
         <div key={el.id}>
           <h2>{el.title}</h2>
           <h3>{el.original_title}</h3>
