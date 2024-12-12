@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import TvContext from "./context/TvContext";
-import ShowFilmTv from "./components/ShowFilmTv";
+import ShowFilmTv from "./components/ShowFilm";
 import SearchBar from "./components/SearchBar";
 function App() {
-  let [SearchFilmTv, setSearchFilmTv] = useState("");
+  let [SearchFilmTv, setSearchFilmTv] = useState([]);
   useEffect(() => {
-    setSearchFilmTv((SearchFilmTv = ""));
+    setSearchFilmTv(SearchFilmTv);
   }, []);
 
   const [FilmTv, setFilmTv] = useState([]);
@@ -20,6 +20,16 @@ function App() {
       .catch((err) => console.error(err));
   }, [SearchFilmTv]);
 
+  // const [Tv, setTv] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://api.themoviedb.org/3/search/tv?api_key=2639ea2071246be22a299842addbf05e&query=${SearchFilmTv}`
+  //     )
+  //     .then((res) => setTv(res.data.results))
+  //     .catch((err) => console.error(err));
+  // }, []);
+  // console.log(Tv);
   return (
     <TvContext.Provider value={{ FilmTv, setSearchFilmTv }}>
       <SearchBar />
