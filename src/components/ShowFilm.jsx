@@ -12,9 +12,17 @@ export default function ShowFilmTv() {
         <h1>Film:</h1>
         {Film.map((el, index) => (
           <div key={index}>
+            <img
+              src={
+                el.poster_path
+                  ? `https://image.tmdb.org/t/p/w342/${el.poster_path}`
+                  : `https://placehold.co/600x400`
+              }
+              alt=""
+            />
             <h3>{el.title}</h3>
             <h4>{el.original_title}</h4>
-            <p>{el.original_language}</p>
+            <img src={`/icons/${el.original_language}.svg`} alt="" />
             <p>{el.vote_average}</p>
           </div>
         ))}
