@@ -15,7 +15,7 @@ export default function ShowTv() {
     return (
       <div className="container mt-4 pb-5">
         <h1 className="text-light">Serie TV:</h1>
-        <div className="row row-cols-1 row-cols-md-6 g-4">
+        <div className="row row-cols-lg-6 row-cols-md-4 g-4">
           {Tv.map((el, index) => {
             const stars = Math.ceil(el.vote_average / 2) || 0;
 
