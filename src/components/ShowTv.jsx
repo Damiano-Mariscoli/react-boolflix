@@ -36,7 +36,7 @@ export default function ShowTv() {
                       className="card-img-top"
                       alt={el.name}
                     />
-                    {isHovered === index && (
+                    {isHovered && (
                       <div className={style.details}>
                         <h5>{el.name}</h5>
                         <p className="card-subtitle mb-2">{el.original_name}</p>
