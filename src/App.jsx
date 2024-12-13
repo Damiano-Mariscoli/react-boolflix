@@ -35,8 +35,10 @@ function App() {
   return (
     <TvContext.Provider value={{ Film, Tv, setSearchFilmTv }}>
       <SearchBar />
-      <ShowFilm />
-      <ShowTv />
+      <div className="bg-dark">
+        <ShowFilm />
+        <ShowTv />
+      </div>
     </TvContext.Provider>
   );
 }
