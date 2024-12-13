@@ -15,14 +15,14 @@ export default function ShowFilm() {
     return (
       <div className="container mt-4">
         <h1 className="text-light">Film:</h1>
-        <div className="row row-cols-1 row-cols-md-4 g-4">
+        <div className="row row-cols-1 row-cols-md-6 g-4">
           {Film.map((el, index) => {
             const stars = (el.vote_average / 2).toFixed(1);
 
             return (
               <div key={index} className="col">
                 <div
-                  className={`card h-100 ${style.hover}`}
+                  className={`card ${style.hover}`}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
@@ -33,7 +33,7 @@ export default function ShowFilm() {
                           ? `https://image.tmdb.org/t/p/w342/${el.poster_path}`
                           : `https://placehold.co/600x400`
                       }
-                      className="card-img-top"
+                      className={`card-img-top ${style.poster}`}
                       alt={el.title}
                     />
                     {isHovered && (
@@ -46,7 +46,7 @@ export default function ShowFilm() {
                           src={`/icons/${el.original_language}.svg`}
                           alt=""
                         />
-                        <p className="card-text">
+                        <p className={`card-text`}>
                           {Array(Math.ceil(stars))
                             .fill()
                             .map((_, i) => (
@@ -55,9 +55,6 @@ export default function ShowFilm() {
                         </p>
                       </div>
                     )}
-                  </div>
-                  <div className="card-body">
-                    <h3 className="card-title">{el.title}</h3>
                   </div>
                 </div>
               </div>

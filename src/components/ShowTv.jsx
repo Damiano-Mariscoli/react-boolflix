@@ -15,7 +15,7 @@ export default function ShowTv() {
     return (
       <div className="container mt-4">
         <h1 className="text-light">Serie TV:</h1>
-        <div className="row row-cols-1 row-cols-md-4 g-4">
+        <div className="row row-cols-1 row-cols-md-6 g-4">
           {Tv.map((el, index) => {
             const stars = Math.ceil(el.vote_average / 2) || 0;
 
@@ -33,7 +33,7 @@ export default function ShowTv() {
                           ? `https://image.tmdb.org/t/p/w342/${el.poster_path}`
                           : `https://placehold.co/600x400`
                       }
-                      className="card-img-top"
+                      className={`card-img-top ${style.poster}`}
                       alt={el.name}
                     />
                     {isHovered && (
@@ -53,9 +53,6 @@ export default function ShowTv() {
                         </p>
                       </div>
                     )}
-                  </div>
-                  <div className="card-body">
-                    <h3 className="card-title">{el.name}</h3>
                   </div>
                 </div>
               </div>
