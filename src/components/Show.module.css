@@ -20,9 +20,9 @@
 
 
   .poster {
-    height: 320px; /* Imposta l'altezza desiderata */
-    width: 100%; /* Assicurati che l'immagine occupi tutta la larghezza */
-    object-fit: cover; /* L'immagine si adatta all'area mantenendo le proporzioni */
+    height: 320px;
+    width: 100%; 
+    object-fit: cover; 
   }
 
 

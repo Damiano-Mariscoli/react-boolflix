@@ -6,6 +6,7 @@ import ShowFilm from "./components/ShowFilm";
 import SearchBar from "./components/SearchBar";
 import ShowTv from "./components/ShowTv";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./components/Footer";
 function App() {
   let [SearchFilmTv, setSearchFilmTv] = useState([]);
   useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
       <div className="bg-dark">
         <ShowFilm />
         <ShowTv />
+        <Footer />
       </div>
     </TvContext.Provider>
   );

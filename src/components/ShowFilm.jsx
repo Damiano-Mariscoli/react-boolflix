@@ -13,7 +13,7 @@ export default function ShowFilm() {
     return null;
   } else {
     return (
-      <div className="container mt-4">
+      <div className="container mt-4 pb-5">
         <h1 className="text-light">Film:</h1>
         <div className="row row-cols-1 row-cols-md-6 g-4">
           {Film.map((el, index) => {
