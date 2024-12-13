@@ -1,0 +1,8 @@
+/* CSS classes to add:
+.hover-card:hover .card-footer {
+  display: block;
+}
+.hover-card .card-footer {
+  display: none;
+}
+*/
